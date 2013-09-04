@@ -1,0 +1,68 @@
+﻿<UserControl x:Class="NowListeningParserTool.Views.About"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mui="http://firstfloorsoftware.com/ModernUI"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+        <ScrollViewer>
+            <StackPanel MinWidth="200">
+                <TextBlock Style="{StaticResource Heading2}" Margin="0,0,0,50" TextWrapping="Wrap">
+                    Now Listening Parser Tool is a free utility for parsing artist and title data from music streaming websites, and desktop music software via Last.fm Scrobbler.</TextBlock>
+                
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <StackPanel Grid.Row="0" Grid.Column="0">
+                    <TextBlock TextWrapping="Wrap" Margin="0,0,0,20" Style="{StaticResource Title}">AUTHOR</TextBlock>
+                        <TextBlock TextWrapping="Wrap" >
+                        Fourth Zone<LineBreak />
+                        Development Studio<LineBreak />
+                        <LineBreak />
+                        Website:  <mui:BBCodeBlock BBCode="[url=http://www.fourthzone.si]www.fourthzone.si[/url]"/>
+                        <LineBreak />
+                        E-mail:  <mui:BBCodeBlock BBCode="[url=mailto:info@fourthzone.si]info@fourthzone.si[/url]"/>
+                        <LineBreak /><LineBreak />
+                        fourthzone.si 2013 © all rights reserved
+                    </TextBlock>
+                    </StackPanel>
+                    <StackPanel Grid.Row="0" Grid.Column="1">
+                        <TextBlock TextWrapping="Wrap" Margin="0,0,0,20" Style="{StaticResource Title}">LICENSE</TextBlock>
+                        <TextBlock TextWrapping="Wrap" >
+                        With this work, you are free:
+                        <LineBreak /><LineBreak />
+                        to Share — to copy, distribute and transmit<LineBreak />
+                        to Remix — to adapt
+                        <LineBreak /><LineBreak />
+                        CC BY-NC-SA 3.0
+                        <LineBreak />
+                        Creative Commons:  <mui:BBCodeBlock BBCode="[url=http://creativecommons.org/licenses/by-nc-sa/3.0/]Read full conditions[/url]"/>
+                        </TextBlock>
+                    </StackPanel>
+                    <StackPanel Grid.Row="0" Grid.Column="2" Margin="5,0,0,0">
+                        <TextBlock TextWrapping="Wrap" Margin="0,0,0,20" Style="{StaticResource Title}">DONATIONS</TextBlock>
+                        <TextBlock TextWrapping="Wrap">
+                        If you enjoy this application you can voluntarily feed us here:
+                        <LineBreak /><LineBreak />
+                        Paypal:  <mui:BBCodeBlock>
+                            <mui:BBCodeBlock.BBCode>[url=https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=TJ8M9TN8Z33GA&amp;lc=US&amp;item_name=Now%20Listening%20Parser%20Donation&amp;currency_code=USD&amp;bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted]Donate[/url]</mui:BBCodeBlock.BBCode>
+                        </mui:BBCodeBlock>
+                            <LineBreak />
+                        Skrill:  <mui:BBCodeBlock BBCode="[url=http://www.skrill.com]nukecx@gmail.com[/url]"/>
+                        </TextBlock>
+                    </StackPanel>
+                </Grid>
+                <TextBlock Style="{StaticResource Heading2}" Margin="0,50,0,0" TextWrapping="Wrap">
+                    If you have a suggestion for parsing another music streaming website, or find any bugs, please send us an email.</TextBlock>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</UserControl>

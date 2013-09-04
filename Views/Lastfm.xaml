@@ -1,0 +1,120 @@
+﻿<UserControl x:Class="NowListeningParserTool.Views.Lastfm"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:mui="http://firstfloorsoftware.com/ModernUI"
+             xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+             xmlns:c="clr-namespace:NowListeningParserTool.Classes"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300" >
+
+    <UserControl.Resources>
+        <c:NegatingConverter x:Key="NegatingConverter"></c:NegatingConverter>
+    </UserControl.Resources>
+
+    <i:Interaction.Triggers>
+        <i:EventTrigger EventName="Loaded">
+            <i:InvokeCommandAction Command="{Binding LoadTimerCommand}"/>
+        </i:EventTrigger>
+        <i:EventTrigger EventName="Unloaded">
+            <i:InvokeCommandAction Command="{Binding StopTimerCommand}"/>
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
+
+    <StackPanel>
+        <ScrollViewer Height="370">
+            <StackPanel MinWidth="200">
+                <StackPanel MinWidth="200" Margin="0,30,0,30">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+                        <mui:ModernButton Grid.Row="0"  Grid.Column="1" HorizontalAlignment="Center" Margin="0,0,0,50" Padding="0,0,5,0" IconWidth="30" IconHeight="30" EllipseDiameter="48"  EllipseStrokeThickness="1" IconData="F1 M 21.3,17L 46.7,17C 47.418,17 48,17.5821 48,18.3L 48,24.7C 48,25.418 47.418,26 46.7,26L 31.3,26C 30.0298,26 29,27.0298 29,28.3L 29,49.7C 29,50.418 28.418,51 27.7,51L 21.3,51C 20.582,51 20,50.418 20,49.7L 20,18.3C 20,17.582 20.582,17 21.3,17 Z M 33.3,29L 54.7,29C 55.418,29 56,29.5821 56,30.3L 56,57.7C 56,58.418 55.418,59 54.7,59L 33.3,59C 32.582,59 32,58.418 32,57.7L 32,30.3C 32,29.5821 32.582,29 33.3,29 Z M 46.8012,33.8669L 45.59,33.8669L 44.2224,34.7694L 42.9102,35.4858L 41.5941,36.0677L 40.2067,36.5625L 40.2067,39.0127C 40.9746,38.8148 41.6574,38.5859 42.2551,38.3259C 42.8528,38.066 43.4116,37.75 43.9314,37.3779L 43.9314,52L 46.8012,52L 46.8012,33.8669 Z " />
+                        <mui:ModernButton Grid.Row="0"  Grid.Column="2" HorizontalAlignment="Center" Margin="0,0,0,50" Padding="0,0,5,0"  IconWidth="30" IconHeight="30" EllipseDiameter="48"  EllipseStrokeThickness="1" IconData="F1 M 21.3,17L 46.7,17C 47.418,17 48,17.5821 48,18.3L 48,24.7C 48,25.418 47.418,26 46.7,26L 31.3,26C 30.0298,26 29,27.0298 29,28.3L 29,49.7C 29,50.418 28.418,51 27.7,51L 21.3,51C 20.582,51 20,50.418 20,49.7L 20,18.3C 20,17.582 20.582,17 21.3,17 Z M 33.3,29L 54.7,29C 55.418,29 56,29.582 56,30.3L 56,57.7C 56,58.418 55.418,59 54.7,59L 33.3,59C 32.582,59 32,58.418 32,57.7L 32,30.3C 32,29.582 32.582,29 33.3,29 Z M 49.506,52L 49.506,49.5379L 41.5022,49.5379L 41.5022,49.4746C 41.5022,49.121 41.6197,48.7687 41.8545,48.4177C 42.0894,48.0667 42.3968,47.7164 42.7768,47.3668L 44.0573,46.2921L 45.4843,45.16L 47.032,43.7865C 47.4938,43.3405 47.8877,42.8701 48.2136,42.3753C 48.5395,41.8805 48.7908,41.3468 48.9677,40.7742C 49.1445,40.2015 49.2329,39.5563 49.2329,38.8385C 49.2329,38.0469 49.1069,37.3456 48.8548,36.7347C 48.6028,36.1238 48.2459,35.6145 47.7841,35.2068C 47.3223,34.7991 46.7662,34.4903 46.1157,34.2805C 45.4652,34.0707 44.7402,33.9658 43.9406,33.9658L 42.5413,34.0648L 41.2924,34.3676L 40.1426,34.8743L 39.0402,35.5848L 39.0402,38.3438C 39.7342,37.6682 40.4559,37.1609 41.2054,36.8218C 41.9548,36.4827 42.6924,36.3131 43.4181,36.3131C 43.8403,36.3131 44.2282,36.3732 44.5818,36.4932C 44.9354,36.6133 45.2422,36.7908 45.5021,37.0256C 45.7621,37.2605 45.9646,37.5534 46.1097,37.9044C 46.2549,38.2554 46.3274,38.6657 46.3274,39.1354C 46.3274,39.5629 46.2654,39.9607 46.1414,40.3289C 46.0174,40.697 45.8439,41.046 45.6209,41.3758L 44.8173,42.3338L 43.7783,43.2798L 42.5413,44.2872L 41.3043,45.3263L 40.1663,46.4405C 39.8114,46.8245 39.502,47.2329 39.2381,47.6656C 38.9742,48.0984 38.7637,48.5602 38.6067,49.051C 38.4497,49.5419 38.3712,50.067 38.3712,50.6265L 38.3712,52L 49.506,52 Z " />
+                        <TextBlock Grid.Row="2"  Grid.Column="1" TextWrapping="Wrap" Padding="0,0,5,0">
+                            Install Last.fm Scrobbler to parse your music from Winamp, Windows Media Player, iTunes or Foobar.<LineBreak /><LineBreak />
+                            <Grid> 
+                            <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+                                <TextBlock Grid.Row="0" Grid.Column="0">Last.fm Scrobbler<LineBreak />
+                                    <mui:BBCodeBlock BBCode="[url=http://www.last.fm/download]Download[/url]"/> 
+                                </TextBlock>
+                            </Grid>
+                        </TextBlock>
+                        <TextBlock Grid.Row="2"  Grid.Column="2" TextWrapping="Wrap" Padding="5,0,5,0">
+                            Set Last.fm username: <mui:BBCodeBlock BBCode="[url=Settings.xaml]Settings[/url]"/>
+                            <LineBreak /><LineBreak />
+                            Run your music player and you are ready!
+                        </TextBlock>
+                    </Grid>
+                </StackPanel>
+
+                <Canvas Margin="0, 0, 0, 0" ClipToBounds="True" Name="MainCanvas" Height="30" Width="Auto"  >
+                    <TextBlock Name="SongNameTextBox" Height="30" Width="Auto" Text="{Binding SongNameTextBox, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource Title}" Canvas.Right="0">
+                        <TextBlock.Resources>
+                            <Storyboard x:Key="Scroll">
+                                <DoubleAnimation From="{Binding ActualWidth, ElementName=SongNameTextBox, Converter={StaticResource NegatingConverter}}" To="{Binding ActualWidth, ElementName=MainCanvas}" Duration="00:00:10"
+              Storyboard.TargetProperty="(Canvas.Right)"
+              Storyboard.TargetName="SongNameTextBox"
+              RepeatBehavior="Forever"/>
+                            </Storyboard>
+                        </TextBlock.Resources>
+                        <TextBlock.Triggers>
+                            <EventTrigger RoutedEvent="TextBlock.Loaded">
+                                <BeginStoryboard Storyboard="{StaticResource Scroll}" />
+                            </EventTrigger>
+                            <EventTrigger RoutedEvent="TextBlock.SizeChanged">
+                                <BeginStoryboard Storyboard="{StaticResource Scroll}" />
+                            </EventTrigger>
+                        </TextBlock.Triggers>
+                    </TextBlock>
+                </Canvas>
+
+
+                <!--<StackPanel Orientation="Horizontal" x:Name="Stack">
+                    <StackPanel.Resources>
+                        <Storyboard x:Key="Slide">
+                            <DoubleAnimation From="0" To="{Binding Width, ElementName=Canvas, Converter={StaticResource NegatingConverter}}" Duration="00:00:10"
+                      Storyboard.TargetProperty="X"
+                      Storyboard.TargetName="TransferCurreny"
+                      RepeatBehavior="Forever"/>
+                        </Storyboard>
+                    </StackPanel.Resources>
+                    <StackPanel.RenderTransform>
+                        <TranslateTransform x:Name="TransferCurreny" X="0"/>
+                    </StackPanel.RenderTransform>
+                    <StackPanel.Triggers>
+                        <EventTrigger RoutedEvent="StackPanel.Loaded">
+                            <BeginStoryboard Storyboard="{StaticResource Slide}" />
+                        </EventTrigger>
+                        <EventTrigger RoutedEvent="StackPanel.SizeChanged">
+                            <BeginStoryboard Storyboard="{StaticResource Slide}" />
+                        </EventTrigger>
+                    </StackPanel.Triggers>
+                    <Canvas x:Name="Canvas" Width="{Binding ActualWidth, ElementName=Stack}">
+                        <TextBlock  Text="{Binding NameSongText, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource Title}"  x:Name="TxtKron" Canvas.Left="0"/>
+                        <TextBlock Text="{Binding NameSongText, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource Title}" Canvas.Left="{Binding Width, ElementName=Canvas}"/>
+                    </Canvas>
+                </StackPanel>-->
+
+            </StackPanel>
+        </ScrollViewer>
+
+
+
+    </StackPanel>
+</UserControl>
