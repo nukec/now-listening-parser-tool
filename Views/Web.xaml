@@ -21,39 +21,40 @@
     </i:Interaction.Triggers>
 
     <StackPanel MinWidth="200">
-    <StackPanel HorizontalAlignment="Center">
-        <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="200" />
-                <ColumnDefinition Width="155" />
-            </Grid.ColumnDefinitions>
-            <TextBlock Grid.Row="0" Grid.Column="0" Margin="0, 0, 0, 20" Text="browser" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{StaticResource Title}" />
-            <TextBlock Grid.Row="0" Grid.Column="1" Margin="0, 0, 0, 20" Text="website" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{StaticResource Title}" />
+        <StackPanel HorizontalAlignment="Center">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="200" />
+                    <ColumnDefinition Width="155" />
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Row="0" Grid.Column="0" Margin="0, 0, 0, 20" Text="browser" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{StaticResource Title}" />
+                <TextBlock Grid.Row="0" Grid.Column="1" Margin="0, 0, 0, 20" Text="website" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{StaticResource Title}" />
 
                 <ListBox Grid.Row="1" Grid.Column="0" Margin="0, 0, 0, 20" Style="{StaticResource ListBoxStyle}" HorizontalAlignment="Left" Height="Auto" Width="155" Name="ListBoxBrowser" SelectedItem="{Binding BrowserNameSelectedItem, Mode=OneWayToSource}" SelectedIndex="0">
-                <ListBoxItem Content="Chrome" Padding="10, 4, 0, 4" Width="150px"/>
-                <ListBoxItem Content="Firefox"  Padding="10, 4, 0, 4" Width="150px"/>
-                <ListBoxItem Content="Opera"  Padding="10, 4, 0, 4" Width="150px"/>
-            </ListBox>
+                    <ListBoxItem Content="Chrome" Padding="10, 4, 0, 4" Width="150px"/>
+                    <ListBoxItem Content="Firefox"  Padding="10, 4, 0, 4" Width="150px"/>
+                    <ListBoxItem Content="Opera"  Padding="10, 4, 0, 4" Width="150px"/>
+                </ListBox>
 
                 <ListBox Grid.Row="1" Grid.Column="1" Margin="0, 0, 0, 20" Style="{StaticResource ListBoxStyle}" HorizontalAlignment="Left" Height="Auto" VerticalAlignment="Top" Width="155" Name="ListBoxWebsite" SelectedItem="{Binding WebsiteNameSelectedItem, Mode=OneWayToSource}" SelectedIndex="0">
-                <ListBoxItem Content="977 Music"  Padding="10, 4, 0, 4" Width="150px" ToolTip="977Music.com"/>
-                <ListBoxItem Content="Grooveshark" Padding="10, 4, 0, 4" Width="150px" ToolTip="Grooveshark.com" />
-                <ListBoxItem Content="iHeart"  Padding="10, 4, 0, 4" Width="150px" ToolTip="iHeart.com - US restricted"/>
-                <ListBoxItem Content="Live365"  Padding="10, 4, 0, 4" Width="150px" ToolTip="Live365.com"/>
-                <ListBoxItem Content="Pandora"  Padding="10, 4, 0, 4" Width="150px" ToolTip="Pandora.com - US restricted"/>
-                <ListBoxItem Content="Sky.FM"  Padding="10, 4, 0, 4" Width="150px" ToolTip="Sky.fm"/>
-                <ListBoxItem Content="Spotify"  Padding="10, 4, 0, 4" Width="150px" ToolTip="Play.Spotify.com - Region restricted"/>
-                <ListBoxItem Content="YouTube"  Padding="10, 4, 0, 4" Width="150px" ToolTip="YouTube.com" />
-            </ListBox>
-        </Grid>
-    </StackPanel>
+                    <ListBoxItem Content="1.FM"  Padding="10, 4, 0, 4" Width="150px" ToolTip="1.fm"/>
+                    <ListBoxItem Content="977 Music"  Padding="10, 4, 0, 4" Width="150px" ToolTip="977Music.com"/>
+                    <ListBoxItem Content="Grooveshark" Padding="10, 4, 0, 4" Width="150px" ToolTip="Grooveshark.com" />
+                    <ListBoxItem Content="iHeart"  Padding="10, 4, 0, 4" Width="150px" ToolTip="iHeart.com - US restricted"/>
+                    <ListBoxItem Content="Live365"  Padding="10, 4, 0, 4" Width="150px" ToolTip="Live365.com"/>
+                    <ListBoxItem Content="Pandora"  Padding="10, 4, 0, 4" Width="150px" ToolTip="Pandora.com - US restricted"/>
+                    <ListBoxItem Content="Sky.FM"  Padding="10, 4, 0, 4" Width="150px" ToolTip="Sky.fm"/>
+                    <ListBoxItem Content="Spotify"  Padding="10, 4, 0, 4" Width="150px" ToolTip="Play.Spotify.com - Region restricted"/>
+                    <ListBoxItem Content="YouTube"  Padding="10, 4, 0, 4" Width="150px" ToolTip="YouTube.com" />
+                </ListBox>
+            </Grid>
+        </StackPanel>
 
-        <Canvas Margin="0, 0, 0, 0" ClipToBounds="True" Name="MainCanvas" Height="30" Width="Auto"  >
+        <Canvas Margin="0, 0, 0, 20" ClipToBounds="True" Name="MainCanvas" Height="30" Width="Auto"  >
             <TextBlock Name="SongNameTextBox" Height="30" Width="Auto" Text="{Binding SongNameTextBox, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource Title}" Canvas.Right="0">
                 <TextBlock.Resources>
                     <Storyboard x:Key="Scroll">
@@ -76,7 +77,7 @@
 
         <TextBlock Name="WebsiteNameTextBlock" Text="{Binding WebsiteNameTextBlock}" Style="{StaticResource Title}" HorizontalAlignment="Center" Visibility="{Binding WebsiteNameIsVisible}"/>
         <Image Name="LogoUrlImage" Stretch="None" Source="{Binding LogoUrlSource}" />
-        
+
     </StackPanel>
 
 

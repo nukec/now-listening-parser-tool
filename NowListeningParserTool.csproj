@@ -103,6 +103,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Classes\NegatingConverter.cs" />
+    <Compile Include="Classes\OnefmWebsiteParser.cs" />
     <Compile Include="Classes\TimerManager.cs" />
     <Compile Include="Commands\MethodInvokerCommand.cs" />
     <Compile Include="Properties\Annotations.cs" />
@@ -213,6 +214,7 @@
   <ItemGroup>
     <Content Include="icon.ico" />
     <Resource Include="Resources\Images\marguee_dark_right.png" />
+    <Resource Include="Resources\Images\logo_1fm.png" />
     <Content Include="Resources\Images\marquee_dark_left.png" />
   </ItemGroup>
   <ItemGroup>

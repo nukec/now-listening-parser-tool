@@ -92,6 +92,7 @@
             set
             {
                 _browserNameSelectedItem = value;
+                GetSongTimer();
                 OnPropertyChanged("BrowserNameSelectedItem");
             }
         }
@@ -107,6 +108,7 @@
             set
             {
                 _websiteNameSelectedItem = value;
+                GetSongTimer();
                 OnPropertyChanged("WebsiteNameSelectedItem");
             }
         }
@@ -156,6 +158,7 @@
         {
             WebsiteNameTextBlock = "";
             WebsiteNameVisibility = Visibility.Hidden;
+            LogoUrlSource = "";
 
             var songName = string.Empty;
 

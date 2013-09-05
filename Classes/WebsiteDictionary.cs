@@ -8,14 +8,15 @@
 
         public WebsiteDictionary()
         {
-            _website.Add("YouTube", new YoutubeWebsiteParser());
+            _website.Add("1.FM", new OnefmWebsiteParser());
             _website.Add("977 Music", new NineNineSevenMusicWebsiteParser());
             _website.Add("Grooveshark", new GroovesharkWebsiteParser());
-            _website.Add("Sky.FM", new SkyfmWebsiteParser());
             _website.Add("iHeart", new IheartWebsiteParser());
             _website.Add("Live365", new LiveThreeSixFiveWebsiteParser());
             _website.Add("Pandora", new PandoraWebsiteParser());
+            _website.Add("Sky.FM", new SkyfmWebsiteParser());
             _website.Add("Spotify", new SpotifyWebsiteParser());
+            _website.Add("YouTube", new YoutubeWebsiteParser());
         }
 
         public string GetArtistAndTitle(string website, string browser, string stringToParse)

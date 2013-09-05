@@ -88,7 +88,9 @@
                         </Grid.ColumnDefinitions>
                                 <TextBlock Grid.Row="0" Grid.Column="0" Text="Userscripts:"></TextBlock>
                                 <TextBlock Grid.Row="1" Grid.Column="0" Text="Github:"></TextBlock>
-                            <mui:BBCodeBlock Grid.Row="0" Grid.Column="1" Padding="11,0,0,0" BBCode="[url=http://userscripts.org/scripts/show/176661]Download[/url]"/> 
+                                
+                            <mui:BBCodeBlock Grid.Row="0" Grid.Column="1" Padding="11,0,0,0" BBCode="[url=http://userscripts.org/scripts/show/176661]Download[/url]"/>
+                            <mui:BBCodeBlock Grid.Row="0" Grid.Column="1" Padding="11,0,0,0" BBCode="[url=https://github.com/nukec/userscript-now-listening-parser-tool-script]Download[/url]"/> 
                             
                             </Grid>
                             
@@ -109,7 +111,7 @@
                             <ColumnDefinition />
                         </Grid.ColumnDefinitions>
                             </Grid>
-                            
+
 
                         </TextBlock>
 

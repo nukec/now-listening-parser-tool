@@ -58,7 +58,7 @@
                         <TextBlock Grid.Row="2"  Grid.Column="2" TextWrapping="Wrap" Padding="5,0,5,0">
                             Set Last.fm username: <mui:BBCodeBlock BBCode="[url=Settings.xaml]Settings[/url]"/>
                             <LineBreak /><LineBreak />
-                            Run your music player and you are ready!
+                            Run your music player, enable Last.fm plugin and you are ready!
                         </TextBlock>
                     </Grid>
                 </StackPanel>
